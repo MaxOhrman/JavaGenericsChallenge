@@ -19,7 +19,7 @@ public class Main {
 
         Team<LeagueOfLegendsTeam> jd_gaming = new Team<>("JD Gaming");
         Team<LeagueOfLegendsTeam> gen_g = new Team<>("Gen.G");
-        Team<LeagueOfLegendsTeam> top_esport = new Team<>("Top Esports");
+        Team<LeagueOfLegendsTeam> top_esports = new Team<>("Top Esports");
         Team<LeagueOfLegendsTeam> t1 = new Team<>("T1");
 
         Team<SoccerTeam> manchester = new Team<>("Manchester");
@@ -29,12 +29,12 @@ public class Main {
         jd_gaming.setWinner(gen_g);
         jd_gaming.setDraw(gen_g);
 
-        t1.setWinner(top_esport);
+        t1.setWinner(top_esports);
 
         LeagueTable<LeagueOfLegendsTeam> table = new LeagueTable<>("The league league");
         table.addMember(jd_gaming);
         table.addMember(gen_g);
-        table.addMember(top_esport);
+        table.addMember(top_esports);
         table.addMember(t1);
 
         table.printLeagueTable();
