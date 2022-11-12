@@ -13,7 +13,7 @@ import java.util.Collections;
 
 public class LeagueTable<T extends Team>{
 
-    private ArrayList<Team<T>> members = new ArrayList<>();
+    private final ArrayList<Team<T>> members = new ArrayList<>();
 
     public void addMember(Team<T> team){
         members.add(team);
