@@ -25,6 +25,7 @@ public class LeagueTable<T extends Team>{
 
         for (Team<T> team : members) {
             System.out.println(ranking + ". " + team.getName() + " wins: " + team.getWins() );
+            ranking++;
         }
     }
 }
