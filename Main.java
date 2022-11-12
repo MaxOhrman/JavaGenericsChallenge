@@ -31,7 +31,7 @@ public class Main {
 
         t1.setWinner(top_esport);
 
-        LeagueTable<LeagueOfLegendsTeam> table = new LeagueTable<>();
+        LeagueTable<LeagueOfLegendsTeam> table = new LeagueTable<>("The league league");
         table.addMember(jd_gaming);
         table.addMember(gen_g);
         table.addMember(top_esport);

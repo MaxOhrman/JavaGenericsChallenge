@@ -13,5 +13,4 @@ public class LeagueOfLegendsTeam extends Team {
         System.out.println("League of legends match cannot be a draw.");
     }
 
-
 }

@@ -50,13 +50,7 @@ public class Team<T> implements Comparable<Team<T>>{
 
     @Override
     public int compareTo(Team<T> team) {
-        if(this.getWins() > team.getWins()) {
-            return -1;
-        } else if (this.getWins() < team.getWins() ) {
-            return 1;
-        } else {
-            return 0;
-        }
-     }
+        return Integer.compare(team.getWins(), this.getWins());
+    }
 
 }
