@@ -1,8 +1,6 @@
 package ohrman.max;
 
-import java.security.PublicKey;
-
-public class Team<T> {
+public class Team<T> implements Comparable<Team<T>>{
     private final String name;
     private int wins;
     private int losses;
@@ -14,6 +12,18 @@ public class Team<T> {
 
     public String getName() {
         return name;
+    }
+
+    public int getWins() {
+        return wins;
+    }
+
+    public int getLosses() {
+        return losses;
+    }
+
+    public int getDraw() {
+        return draw;
     }
 
     private void addWin() {
@@ -37,5 +47,16 @@ public class Team<T> {
         addDraw();
         opposingTeam.addDraw();
     }
+
+    @Override
+    public int compareTo(Team<T> team) {
+        if(this.getWins() > team.getWins()) {
+            return -1;
+        } else if (this.getWins() < team.getWins() ) {
+            return 1;
+        } else {
+            return 0;
+        }
+     }
 
 }

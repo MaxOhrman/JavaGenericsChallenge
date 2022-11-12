@@ -25,7 +25,19 @@ public class Main {
         Team<SoccerTeam> manchester = new Team<>("Manchester");
 
         jd_gaming.setWinner(gen_g);
+        jd_gaming.setWinner(gen_g);
+        jd_gaming.setWinner(gen_g);
         jd_gaming.setDraw(gen_g);
+
+        t1.setWinner(top_esport);
+
+        LeagueTable<LeagueOfLegendsTeam> table = new LeagueTable<>();
+        table.addMember(jd_gaming);
+        table.addMember(gen_g);
+        table.addMember(top_esport);
+        table.addMember(t1);
+
+        table.printLeagueTable();
 
     }
 }
