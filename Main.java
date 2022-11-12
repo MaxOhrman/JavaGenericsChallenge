@@ -9,6 +9,7 @@ package ohrman.max;
  */
 
 import ohrman.max.teams.LeagueOfLegendsTeam;
+import ohrman.max.teams.SoccerTeam;
 
 public class Main {
 
@@ -16,11 +17,15 @@ public class Main {
 
         //Create some teams
 
-        LeagueOfLegendsTeam jd_gaming = new LeagueOfLegendsTeam("JD Gaming");
-        LeagueOfLegendsTeam gen_g = new LeagueOfLegendsTeam("Gen.G");
-        LeagueOfLegendsTeam top_esport = new LeagueOfLegendsTeam("Top Esports");
-        LeagueOfLegendsTeam t1 = new LeagueOfLegendsTeam("T1");
+        Team<LeagueOfLegendsTeam> jd_gaming = new Team<>("JD Gaming");
+        Team<LeagueOfLegendsTeam> gen_g = new Team<>("Gen.G");
+        Team<LeagueOfLegendsTeam> top_esport = new Team<>("Top Esports");
+        Team<LeagueOfLegendsTeam> t1 = new Team<>("T1");
 
+        Team<SoccerTeam> manchester = new Team<>("Manchester");
+
+        jd_gaming.setWinner(gen_g);
+        jd_gaming.setDraw(gen_g);
 
     }
 }
