@@ -3,7 +3,7 @@ package ohrman.max;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class LeagueTable<T extends Team>{
+public class LeagueTable<T> {
     private final String leagueName;
 
     private final ArrayList<Team<T>> members = new ArrayList<>();

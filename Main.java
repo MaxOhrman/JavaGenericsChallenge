@@ -9,29 +9,26 @@ package ohrman.max;
  */
 
 import ohrman.max.teams.LeagueOfLegendsTeam;
-import ohrman.max.teams.SoccerTeam;
+import ohrman.max.teams.LeaguePlayers;
 
 public class Main {
 
     public static void main(String[] args) {
 
+        LeaguePlayers bob = new LeaguePlayers("Bob Schwang", 21);
+
         //Create some teams
-
-        Team<LeagueOfLegendsTeam> jd_gaming = new Team<>("JD Gaming");
-        Team<LeagueOfLegendsTeam> gen_g = new Team<>("Gen.G");
-        Team<LeagueOfLegendsTeam> top_esports = new Team<>("Top Esports");
-        Team<LeagueOfLegendsTeam> t1 = new Team<>("T1");
-
-        Team<SoccerTeam> manchester = new Team<>("Manchester");
+        Team<LeagueOfLegendsTeam<LeaguePlayers>> jd_gaming = new LeagueOfLegendsTeam<>("JD Gaming");
+        Team<LeagueOfLegendsTeam<LeaguePlayers>> gen_g = new LeagueOfLegendsTeam<>("Gen.G");
+        Team<LeagueOfLegendsTeam<LeaguePlayers>> top_esports = new LeagueOfLegendsTeam<>("Top Esports");
+        Team<LeagueOfLegendsTeam<LeaguePlayers>> t1 = new LeagueOfLegendsTeam<>("T1");
 
         jd_gaming.setWinner(gen_g);
         jd_gaming.setWinner(gen_g);
         jd_gaming.setWinner(gen_g);
         jd_gaming.setDraw(gen_g);
 
-        t1.setWinner(top_esports);
-
-        LeagueTable<LeagueOfLegendsTeam> table = new LeagueTable<>("The league league");
+        LeagueTable<LeagueOfLegendsTeam<LeaguePlayers>> table = new LeagueTable<>("The league league");
         table.addMember(jd_gaming);
         table.addMember(gen_g);
         table.addMember(top_esports);
